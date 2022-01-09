@@ -18,7 +18,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    getLogs: [Log]
+    getLogs(limit: Int, offset: Int): [Log]
   }
 
   type Mutation {
@@ -35,8 +35,8 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    getLogs: async (_parent, _args, _context, _info) => {
-      const logs = await Log.find();
+    getLogs: async (root, { limit, offset }) => {
+      const logs = await Log.find().limit(limit).skip(offset);
       return logs;
     },
   },
