@@ -1,0 +1,20 @@
+{
+  "name": "hypertool-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.6.1",
+    "dotenv": "^10.0.0",
+    "graphql": "^16.2.0",
+    "graphql-tools": "^8.2.0",
+    "mongodb": "^4.3.0",
+    "mongoose": "^6.1.5"
+  }
+}
